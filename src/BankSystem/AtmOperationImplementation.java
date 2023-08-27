@@ -16,6 +16,9 @@ public class AtmOperationImplementation implements AtmOperationInterface {
 
     @Override
     public void depositAmount(double depositAmount) {
+        System.out.println(depositAmount + " Deposited successfully");
+        atm.setBalance(atm.getBalance()+depositAmount);
+        viewBalance();
 
     }
 

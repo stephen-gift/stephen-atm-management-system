@@ -20,34 +20,44 @@ public class Main {
         if ((atmNumber == atmnumber)&&(atmpin == atmPin)) {
             while (true){
                 System.out.println("""
-                               Choose an option\s
-                                1. View Available balance\s
-                                2. Withdraw Amount\s
-                                3. Deposit Amount\s
-                                4. View Mini-Statement\s
-                                5. Exit\s
-                                Enter Choice: \s""");
-                System.out.println("Validation done");
+                         ****************************
+                         Choose an option ->
+                         
+                         1. View Available balance
+                         2. Withdraw Amount
+                         3. Deposit Amount
+                         4. View Mini-Statement
+                         5. Exit
+                         ****************************
+                         Enter Choice:
+                        """);
                 int choice = scanner.nextInt();
 
                  switch (choice){
                     case 1:{
                         operationInterface.viewBalance();
-
+                        break;
                     }
                     case 2:{
+                        break;
 
                     }
                     case 3:{
+                        System.out.println("Enter Amount to deposit: ");
+                        double depositAmount = scanner.nextDouble();
+                        operationInterface.depositAmount(depositAmount);
+                        break;
 
                     }
                     case 4:{
-
+                        break;
                     }
                     case 5:{
                         System.out.println("Collect your ATM card \n" +
                                 "Thank you for using Stephen ATM Machine");
                         System.exit(0);
+                        break;
+
                     }
                     default:{
                         System.out.println("Please Enter correct choice: ");
