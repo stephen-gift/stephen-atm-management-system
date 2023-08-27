@@ -2,9 +2,11 @@ package BankSystem;
 
 public class AtmOperationImplementation implements AtmOperationInterface {
 
+    ATM atm = new ATM();
     @Override
     public void viewBalance() {
 
+        System.out.println("Available balance is: " + atm.getBalance());
     }
 
     @Override

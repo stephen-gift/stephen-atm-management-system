@@ -4,9 +4,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        AtmOperationInterface operationInterface = new AtmOperationImplementation();
         int atmnumber = 12345;
         int atmpin = 123;
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Welcome to Stephen ATM Machine !!!");
         System.out.println("Enter your Atm Number: ");
         int atmNumber = scanner.nextInt();
@@ -30,6 +32,7 @@ public class Main {
 
                  switch (choice){
                     case 1:{
+                        operationInterface.viewBalance();
 
                     }
                     case 2:{
