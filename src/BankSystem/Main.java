@@ -33,36 +33,27 @@ public class Main {
                         """);
                 int choice = scanner.nextInt();
 
-                 switch (choice){
-                    case 1:{
-                        operationInterface.viewBalance();
-                        break;
-                    }
-                    case 2:{
-                        break;
+                switch (choice) {
+                    case 1 -> operationInterface.viewBalance();
+                    case 2 -> {
 
                     }
-                    case 3:{
+                    case 3 -> {
                         System.out.println("Enter Amount to deposit: ");
                         double depositAmount = scanner.nextDouble();
                         operationInterface.depositAmount(depositAmount);
-                        break;
 
                     }
-                    case 4:{
-                        break;
+                    case 4 -> {
                     }
-                    case 5:{
+                    case 5 -> {
                         System.out.println("Collect your ATM card \n" +
-                                "Thank you for using Stephen ATM Machine");
+                                           "Thank you for using Stephen ATM Machine");
                         System.exit(0);
-                        break;
 
                     }
-                    default:{
-                        System.out.println("Please Enter correct choice: ");
-                    }
-            }
+                    default -> System.out.println("Please Enter correct choice: ");
+                }
             }
     } else{
             System.out.println("Incorrect Number or Pin");
